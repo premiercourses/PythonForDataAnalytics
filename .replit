@@ -1,3 +1,12 @@
+entrypoint = "main.py"
 modules = ["python-base-3.13"]
+
 [nix]
 channel = "stable-24_05"
+
+[deployment]
+run = ["python3", "main.py"]
+deploymentTarget = "cloudrun"
+
+[unitTest]
+language = "python3"
